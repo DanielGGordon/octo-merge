@@ -29,4 +29,4 @@ done
 # At this point, branch 8 should be checkout out
 # 8 branches created, with 5 commits each
 # print the log graph to see what's going on
-git logsh;
+git log --oneline --graph -decorate -n 20
