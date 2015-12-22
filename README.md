@@ -7,26 +7,30 @@ Create an arbitrary number of branches that can be octopus merged
 
 ## Why?
 
-Honestly, just for fun. I have never needed to merge more than 2 branches at a time. 
-*I thought merging 100 branches at once would be cool*. 
+Honestly, just for fun. I have never needed to merge more than 2 branches at a time.
+*I thought merging 100 branches at once would be cool*.
 
 ## What it will look like when finished?
 
 ![Octo_merge](http://i.imgur.com/tbPwueq.png)
 
 ## Requirements
-TODO
+* A terminal with git
+  * For Windows users, use Git Bash, or my personal favorite, [Cmder](http://cmder.net/)
+* A GUI for displaying lots of branches
+  * I personally like [SourceTree](https://www.sourcetreeapp.com/)
 
 ## Usage
-TODO
+First, you will want to clone this repository: `git clone https://github.com/DanielGGordon/octo-merge.git`
+And then `cd octo-merge`
 
-### Contents descripton
-TODO
+The first script you will want to run is `create_octo.sh`. This script will:
+* Create a file called `octo_test.txt` that will contain N lines in the file.
+  * Each line will be changed by a different branch
+  *  
+
+*
 
 ## Future improvements and additions
-TODO
-
-
-
-
-
+* 'Randomize' the branch creation and commits so that the history looks more scrambled
+* Do a 'smart' search of existing branches, instead of hardcoding the search and delete
