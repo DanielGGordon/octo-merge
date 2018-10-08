@@ -21,7 +21,7 @@ git commit -m "Added the octo file with $BRANCHES lines"
 # Create the 'head' branch - the branch all others are created from
 for i in $(eval echo "{1..$BRANCHES}")
 do
-    git checkout -b octo_branch_$i;
+    git checkout -b "octo_branch_$i";
     for j in {1..3}
     do
         sed -i -e "s/line $i _/line $i _ $RANDOM/g" octo_test.txt;
