@@ -26,12 +26,13 @@ And then `cd octo-merge`
 
 The first script you will want to run is `create_octo.sh`. This script will:
 * Create a file called `octo_test.txt` that will contain N lines in the file.
-  * Each line will be changed by a different branch
-  *  
+* Each line will be changed by a different branch
 
-*
+After that, execute `octo_merge.sh` to merge all branches.
 
 ## Future improvements and additions
 * 'Randomize' the branch creation and commits so that the history looks more scrambled
 * Do a 'smart' search of existing branches, instead of hardcoding the search and delete
-delete this line! just a git test
+* Test on multiple environments (currently tested on macOS 10.14 using Apple Git-112 version 2.17.1)
+* Use sanity checks to ensure environment is clean prior to command execution
+* Error handling 
