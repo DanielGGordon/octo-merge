@@ -7,10 +7,15 @@
 # Future updates:
     # Make script be able to figure out how many branches there are
 
-# How to do this?
-# Could create a file with all the branch names, and then pass that as a parameter to the merge command?
+# Get all branch names:
+# 1. List all branches
+# 2. Filter out all branches by only octo branches
+# 3. Remove prefixed junk
+# 4. Place all branches on one line, delimited by a space
+OCTO_BRANCHES="$(git branch | grep octo_branch_ | cut -c 3- | tr '\n' ' ')"
 
-for i in $(eval echo "{1..$1}")
-do
-    echo -e "octo_branch_$i" >> branch_list.txt;
-done
+# Make sure we're merging into master!
+git checkout master
+
+# Merge all branches
+git merge $OCTO_BRANCHES
